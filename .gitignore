@@ -89,7 +89,8 @@ out/
 
 # Nuxt.js build / generate output
 .nuxt/
-dist/
+# Ignore dist directory by default, unless specified
+# dist/
 
 # Gatsby files
 .cache/
@@ -127,3 +128,6 @@ dist/
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Include dist directory for upload
+!dist/
