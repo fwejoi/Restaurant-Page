@@ -1,4 +1,297 @@
-/* styles.css */
-body {
-  background-color: rgb(255, 115, 115);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  cursor: default;
+  overflow-x: hidden;
 }
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#nav {
+  height: 7%;
+  background-color: #8e2a21;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15%;
+  color: #f2e291;
+  font-family: "Protest Strike", sans-serif;
+  font-size: 2rem;
+}
+
+#nav p {
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+nav li {
+  list-style: none;
+  cursor: pointer;
+}
+
+#content {
+  height: 93%;
+}
+
+#home {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+#home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.homepageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.homeContent {
+  position: absolute; /* 绝对定位 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 居中 */
+  text-align: center; /* 文本居中对齐 */
+  z-index: 1; /* 确保文本在上层 */
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeContent h1 {
+  font-family: "Lilita One", sans-serif;
+  color: #d14a3b; /* 文字颜色 */
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.homeContent p {
+  font-family: "Lilita One", sans-serif;
+  color: #dfd9ca;
+  font-size: 1.5rem;
+}
+
+.Menu-button {
+  margin-top: 5rem;
+  background-color: #ffd561; /* 暖色调背景 */
+  color: white; /* 文字颜色 */
+  border: 1px solid black; /* 去掉边框 */
+  padding: 5px 30px; /* 内边距 */
+  font-size: 20px; /* 字体大小 */
+  cursor: pointer; /* 鼠标悬停时变为手型 */
+  border-radius: 25px; /* 圆角 */
+  transition: background-color 0.3s ease; /* 平滑过渡效果 */
+  width: 30%;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.Menu-button:hover {
+  background-color: #ff4f3d; /* 悬停时稍微加深颜色 */
+}
+
+/*菜单界面*/
+#menu {
+  width: 100%;
+  height: 100%;
+  background-color: #f8da90;
+}
+
+.MenuPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 0;
+}
+
+.MenuPageContainer h1 {
+  font-size: 3rem;
+  color: #000000;
+  font-family: "Permanent Marker", cursive;
+  border-bottom: 3px solid #ec1400; /* 设置线条粗细和颜色 */
+}
+
+.menuCards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* 菜单卡片间距 */
+  background-color: #8e2a21;
+  width: 70%;
+}
+
+.foodCard {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.foodImage {
+  width: 400px; /* 图片宽度 */
+  height: 300px;
+  border-radius: 8px; /* 圆角 */
+  margin-right: 15px; /* 图片与文本的间距 */
+  object-fit: cover;
+}
+
+.foodDetails {
+  flex: 1; /* 使描述部分占满剩余空间 */
+}
+
+.foodHeader {
+  display: flex;
+  justify-content: space-between; /* 名称和价格两边对齐 */
+  align-items: center; /* 垂直居中 */
+}
+
+.foodName {
+  font-size: 1.4em; /* 食物名称大小 */
+  margin: 0; /* 去掉默认边距 */
+  font-family: "Alfa Slab One", serif;
+  font-size: 1.8rem;
+  color: #8e2a21;
+}
+
+.foodPrice {
+  color: #d41c00; /* 价格颜色 */
+  font-weight: bold; /* 加粗价格 */
+  margin: 0; /* 去掉默认边距 */
+}
+
+.divider {
+  margin: 10px 0; /* 线的上下间距 */
+  border: 0; /* 去掉默认边框 */
+  border-top: 1px solid #ccc; /* 添加顶部边框 */
+}
+
+.foodDescription {
+  font-size: 1.2rem;
+  margin-top: 10px; /* 描述与线的间距 */
+  font-family: "Itim", cursive;
+}
+
+/* 预定界面 */
+#reservation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation-container {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+    overflow-y: hidden;
+}
+
+.resBackgroundImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+
+}
+
+.reservation-content{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 居中 */
+  z-index: 1;
+}
+
+.reservation-content h1{
+    font-size: 2rem;
+    color: #bd0f0f;
+}
+
+
+.reservation-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 间距 */
+}
+
+.input-group {
+     flex: 1 1 calc(33.33%); /*calc(33.33% - 10px) 使得每个输入框的基础宽度是容器宽度的三分之一，再减去一个固定的间距（10px），以防止元素之间重叠。 */
+    min-width: 200px; /* 最小宽度 */
+}
+
+.input-group:nth-last-child(2),
+.input-group:nth-last-child(1) {
+    flex: 1 1 100%; /* 最后两个输入框占据整行 */
+}
+
+label {
+  font-size: 1.5rem;
+  color: #ffd561;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid rgba(204, 204, 204, 0.8); /* 透明边框 */
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9); /* 背景透明 */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ffd561;; /* 焦点时边框颜色 */
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 64, 0, 0.5);
+}
+
+.submit-btn {
+    font-size: 1.2rem;
+  background-color: rgb(255, 83, 20); /* 按钮背景透明 */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: rgb(159, 44, 3); /* 悬停时按钮背景 */
+}
+
