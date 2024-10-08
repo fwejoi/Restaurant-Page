@@ -5,7 +5,7 @@ import { renderReserveationPage } from "./reservation";
 
 const tabs = document.querySelectorAll("[data-tab-target]");//得到标签元素
 
-renderReserveationPage();
+renderHomePage();
 tabs.forEach((tab)=>{//绑定标签点击切换界面事件
     tab.addEventListener('click',()=>{
         const target=tab.dataset.tabTarget;

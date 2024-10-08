@@ -1,4 +1,5 @@
 import backrgoundImg from "./img/img1.jpg";
+import { renderMenuPage } from "./menu";
 
 export function renderHomePage() {
   const contetContainer = document.querySelector("#content");
@@ -15,8 +16,12 @@ export function renderHomePage() {
             <button class="Menu-button">Discover Menu</button>
         </div>
     </div>
-
     `;
+
+    const menuButton = home.querySelector(".Menu-button");
+    menuButton.addEventListener("click", () => {
+      renderMenuPage(); // 点击按钮时渲染菜单页面
+    });
 
   contetContainer.appendChild(home);
 }
